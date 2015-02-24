@@ -5,6 +5,7 @@ window.onload = function(){
     var ctx = canvas.getContext("2d");
     var particles = [];
     var speed = 0.1;
+    var radius = 100;
     var range = 100;
     var angle = 0;
     var centerY = canvas.height / 2;
@@ -13,9 +14,9 @@ window.onload = function(){
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    for ( var i = 0; i < 50; i++ ) {
-
-        var particle = new Particle(3, '#cccccc');
+    for ( var i = 0; i < 70; i++ ) {
+        var radius = Math.floor((Math.random() * 4) + 2);
+        var particle = new Particle(radius, '#6a6a6a');
         particle.x = Math.random() * canvas.width;
         particle.y = Math.random() * canvas.width;
         particles.push(particle);
@@ -38,12 +39,6 @@ window.onload = function(){
             var mouseY = event.clientY;
 
         }, true);
-
-        particles.forEach(function(particle, i){
-
-
-
-        });
 
         requestAnimationFrame(drawFrame);
 
