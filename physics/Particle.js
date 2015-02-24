@@ -6,6 +6,7 @@ function Particle(radius, color) {
     this.scaleX = 1;
     this.scaleY = 1;
     this.color = color;
+    this.opacity = 1;
 }
 
 Particle.prototype.draw = function(ctx) {

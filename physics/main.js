@@ -29,9 +29,7 @@ window.onload = function(){
         angle += speed;
 
         for ( var i = 0; i < particles.length; i++  ) {
-
             particles[i].draw(ctx);
-
         }
 
         document.addEventListener("mousemove", function(event){
@@ -39,11 +37,13 @@ window.onload = function(){
             var mouseX = event.clientX;
             var mouseY = event.clientY;
 
-            //if (  ) {
-            //
-            //}
-
         }, true);
+
+        particles.forEach(function(particle, i){
+
+
+
+        });
 
         requestAnimationFrame(drawFrame);
 
