@@ -15,6 +15,7 @@ window.onload = function(){
     canvas.height = window.innerHeight;
 
     for ( var i = 0; i < 70; i++ ) {
+
         var radius = Math.floor((Math.random() * 4) + 2);
         var particle = new Particle(radius, '#6a6a6a');
         particle.x = Math.random() * canvas.width;
