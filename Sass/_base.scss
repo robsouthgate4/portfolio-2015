@@ -1,0 +1,48 @@
+@import "compass";
+
+/* ***** BASE STYLES ***** */
+
+
+ h1 {
+	font-size: 30px; font-family: $font-heading; font-weight: 400; text-transform: uppercase;
+ }
+ h2 {
+	font-size: 20px; font-family: $font-heading; font-weight: 400; text-transform: uppercase;
+ }
+ h3 {
+	font-size: 18px; font-family: $font-heading; font-weight: 400; text-transform: uppercase;
+ }
+ h4 {
+	font-size: 16px; font-family: $font-heading; font-weight: 400; text-transform: uppercase;
+ }
+ p {
+	font-size: 14px; font-family: $font-generic;
+ }
+ a {
+ 	
+ }
+
+
+ *:focus {
+    outline: 0;
+}
+
+.margin-bottom-30 {
+	margin-bottom: 30px;
+}
+
+.width-fluid {
+	width: 100%;
+}
+
+.no-border {
+	border: 0 !important;
+}
+
+.no-padding {
+	padding: 0 !important;
+}
+
+.padding-30 {
+	padding: 30px;
+}

@@ -1,0 +1,125 @@
+
+/* ********************************** */
+/* .direction-nav
+/* ********************************** */
+.direction-nav {
+    position: absolute; height: 100%; width: 100%; display: none;
+    a {
+        position: absolute; display: block; z-index: 1000;
+    }
+}
+
+/* ********************************** */
+/* .wrap
+/* ********************************** */
+.wrap {
+	height: 100%; width: 100%; border: 30px solid #ccc; display: none;
+}
+
+/* ********************************** */
+/* .slide-container
+/* ********************************** */
+.slide-container{
+	position: relative; width: 100%; height: 100%; display: none;
+}
+
+/* ********************************** */
+/* .view
+/* ********************************** */
+.view {
+    width: 100%; height: 100%; position:absolute; top: 0; left: 0;
+    p, h2, h3, div {
+      color: #fff !important;
+    }
+}
+
+.slideLeft.ng-enter, .slideLeft.ng-leave, .slideRight.ng-enter, .slideRight.ng-leave,
+.slideUp.ng-enter, .slideUp.ng-leave, .slideDown.ng-enter, .slideDown.ng-leave {
+    -webkit-transition:all .4s ease-out; transition:all .4s;
+}
+
+
+
+//Slide left
+.slideLeft.ng-enter {
+    left:100%;
+}
+
+.slideLeft.ng-enter.ng-enter-active {
+    left:0;
+}
+
+.slideLeft.ng-leave.ng-leave-active {
+    left:-100%;
+}
+
+
+
+//Slide right
+.slideRight.ng-enter {
+    left:-100%;
+}
+
+.slideRight.ng-enter.ng-enter-active {
+    left:0;
+}
+
+.slideRight.ng-leave.ng-leave-active {
+    left:100%;
+}
+
+
+//Slide down
+.slideDown.ng-enter {
+    top:-1000px;
+}
+
+.slideDown.ng-enter.ng-enter-active {
+    top:0;
+}
+
+.slideDown.ng-leave.ng-leave-active {
+    top:1000px;
+}
+
+
+//Slide up
+.slideUp.ng-enter {
+    top: 1000px;
+}
+
+.slideUp.ng-enter.ng-enter-active {
+    top: 0;
+}
+
+.slideUp.ng-leave.ng-leave-active {
+   top: -1000px;
+}
+
+/************ keyframes ************/
+
+/* scale and fade */
+
+@keyframes scaleDown {
+	to { opacity: 0; transform: scale(.8); }
+}
+
+@keyframes scaleUp {
+	from { opacity: 0; transform: scale(.8); }
+}
+
+@keyframes scaleUpDown {
+	from { opacity: 0; transform: scale(1.2); }
+}
+
+@keyframes scaleDownUp {
+	to { opacity: 0; transform: scale(1.2); }
+}
+
+@keyframes scaleDownCenter {
+	to { opacity: 0; transform: scale(.7); }
+}
+
+@keyframes scaleUpCenter {
+	from { opacity: 0; transform: scale(.7); }
+}
