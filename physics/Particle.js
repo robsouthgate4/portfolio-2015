@@ -21,3 +21,4 @@ Particle.prototype.draw = function(ctx) {
     ctx.fill();
     ctx.restore();
 }
+
