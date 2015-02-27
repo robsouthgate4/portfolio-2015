@@ -1,14 +1,16 @@
 function Particle(radius, color) {
     this.x = 0;
     this.y = 0;
+    this.vx = 0;
+    this.vy = 0;
     this.radius = radius;
     this.rotation = 0;
     this.scaleX = 1;
     this.scaleY = 1;
-    this.color = color;
+    this.color = utils.parseColor(color);
     this.opacity = 1;
-}
 
+}
 Particle.prototype.draw = function(ctx) {
     ctx.save();
     ctx.translate(this.x, this.y);

@@ -1,64 +1,65 @@
 
-window.onload = function(){
+window.onload = function () {
 
-    var canvas = document.getElementById("canvas"),
-        ctx = canvas.getContext("2d"),
-        ship = new Ship(),
-        vr = 0,
-        vx = 0,
-        vy = 0,
-        thrust = 0;
+    var canvas = document.getElementById('canvas'),
+        ctx = canvas.getContext('2d'),
+        particles = [],
+        numParticles = 80,
+        mouse = utils.captureMouse(canvas),
+        gravity = 0.5,
+        ax = 0.05,
+        ay = 0.05;
 
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
 
-        ship.x = canvas.width / 2;
-        ship.y = canvas.height / 2;
+    for (var particle, i = 0; i < numParticles; i++) {
 
-        window.addEventListener('keydown', function (event) {
-            switch (event.keyCode) {
-                case 37: //left
-                    vr = -3;
-                    break;
-                case 39: //right
-                    vr = 3;
-                    break;
-                case 38: //up
-                    thrust = 0.05;
-                    ship.showFlame = true;
-                    break;
-            }
-        }, false);
+        particle = new Particle(2, "#ffffff");
+        particle.x = Math.random() * canvas.width;
+        particle.y = Math.random() * canvas.height;
+        particle.vx = Math.random() * 2 - 1;
+        particle.vy = Math.random() * 2 - 1;
+        particles.push(particle);
 
-        window.addEventListener('keyup', function (event) {
-            vr = 0;
-            thrust = 0;
-            ship.showFlame = false;
-        }, false);
+    }
 
-    (function drawFrame() {
+    function draw (particle) {
+
+        particle.draw(ctx);
+
+        particle.x += particle.vx;
+        particle.y += particle.vy;
+
+        if ( particle.x > canvas.width || particle.x < 0 ) {
+            particle.vx *= -1;
+        }
+        if ( particle.y > canvas.height || particle.y < 0) {
+            particle.vy *= -1;
+        }
+
+    }
+
+    (function drawFrame () {
 
         window.requestAnimationFrame(drawFrame, canvas);
-
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-        ship.rotation += vr * Math.PI / 180;
-            var angle = ship.rotation,
-                ax = Math.cos(angle) * thrust,
-                ay = Math.sin(angle) * thrust;
+        particles.forEach(function(element, i){
 
-            vx += ax;
-            vy += ay;
+            draw(element);
 
-            ship.x += vx;
-            ship.y += vy;
+            var dx = mouse.x - element.x,
+                dy = mouse.y - element.y,
+                dist = Math.sqrt(dx * dx + dy * dy);
 
-        ship.draw(ctx);
+                if (dist < 50) {
+                    element.radius = 5;
+                }
 
+        });
 
-    })();
-
-
+    }());
 };
 
 
