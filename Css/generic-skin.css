@@ -42,7 +42,7 @@
   font-style: normal;
 }
 /* ***** BASE STYLES ***** */
-/* line 6, ../Sass/_base.scss */
+/* line 5, ../Sass/_base.scss */
 h1 {
   font-size: 30px;
   font-family: "Dosis", sans-serif;
@@ -50,7 +50,7 @@ h1 {
   text-transform: uppercase;
 }
 
-/* line 9, ../Sass/_base.scss */
+/* line 8, ../Sass/_base.scss */
 h2 {
   font-size: 20px;
   font-family: "Dosis", sans-serif;
@@ -58,7 +58,7 @@ h2 {
   text-transform: uppercase;
 }
 
-/* line 12, ../Sass/_base.scss */
+/* line 11, ../Sass/_base.scss */
 h3 {
   font-size: 18px;
   font-family: "Dosis", sans-serif;
@@ -66,7 +66,7 @@ h3 {
   text-transform: uppercase;
 }
 
-/* line 15, ../Sass/_base.scss */
+/* line 14, ../Sass/_base.scss */
 h4 {
   font-size: 16px;
   font-family: "Dosis", sans-serif;
@@ -74,38 +74,38 @@ h4 {
   text-transform: uppercase;
 }
 
-/* line 18, ../Sass/_base.scss */
+/* line 17, ../Sass/_base.scss */
 p {
   font-size: 14px;
   font-family: "Open Sans", sans-serif;
 }
 
-/* line 26, ../Sass/_base.scss */
+/* line 25, ../Sass/_base.scss */
 *:focus {
   outline: 0;
 }
 
-/* line 30, ../Sass/_base.scss */
+/* line 29, ../Sass/_base.scss */
 .margin-bottom-30 {
   margin-bottom: 30px;
 }
 
-/* line 34, ../Sass/_base.scss */
+/* line 33, ../Sass/_base.scss */
 .width-fluid {
   width: 100%;
 }
 
-/* line 38, ../Sass/_base.scss */
+/* line 37, ../Sass/_base.scss */
 .no-border {
   border: 0 !important;
 }
 
-/* line 42, ../Sass/_base.scss */
+/* line 41, ../Sass/_base.scss */
 .no-padding {
   padding: 0 !important;
 }
 
-/* line 46, ../Sass/_base.scss */
+/* line 45, ../Sass/_base.scss */
 .padding-30 {
   padding: 30px;
 }
