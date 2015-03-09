@@ -1,4 +1,5 @@
 function Particle(radius, color) {
+
     this.x = 0;
     this.y = 0;
     this.vx = 0;
@@ -12,6 +13,7 @@ function Particle(radius, color) {
 
 }
 Particle.prototype.draw = function(ctx) {
+
     ctx.save();
     ctx.translate(this.x, this.y);
     ctx.rotate(this.rotation);
@@ -22,5 +24,16 @@ Particle.prototype.draw = function(ctx) {
     ctx.closePath();
     ctx.fill();
     ctx.restore();
-}
 
+};
+
+Particle.prototype.getBounds = function() {
+
+    return {
+        x: this.x - this.radius,
+        y: this.y - this.radius,
+        width: this.radius * 2,
+        height: this.radius * 2
+    };
+
+};
